@@ -37,22 +37,69 @@
             </button>
         </div>
     </div>
-    <div>
-        <div class="mx-32 my-16 p-4 flex items-center bg-white  justify-between shadow-lg">
-            <div><span class="text-4xl text-pink-700 font-bold"> $10.000 USD</span> </div>
+    <div class="rounded-10"> 
+      <div class="">
+        <div class="mx-32 mt-12 flex items-center bg-white  justify-between shadow-lg border-b">
+            <div><span id="total" class="ml-2 text-4xl text-pink-700 font-bold" value="10000"> $10.000 USD</span> </div>
             <div class="items-center flex"> <span> Loan term in months</span>
-                <div class="m-4 p-1 transform focus:translate-x-6 rounded-full text-white bg-gradient-to-r from-purple-700 via-pink-700 to-red-700 rounded-3xl">
-                    <button class="p-3 px-5 transform focus:translate-x-6 rounded-3xl focus:text-pink-700 focus:bg-white">3</button>
-                    <button class="p-3 px-5 transform focus:translate-x-6 rounded-3xl focus:text-pink-700 focus:bg-white">6</button>
-                    <button class="p-3 px-5 transform focus:translate-x-6 rounded-3xl focus:text-pink-700 focus:bg-white">12</button>
-                    <button class="p-3 px-5 transform focus:translate-x-6 rounded-3xl focus:text-pink-700 focus:bg-white">24</button>
+                <div class=" m-2 p-1 transform rounded-full text-white bg-gradient-to-r from-purple-700 via-pink-700 to-red-700 rounded-3xl">
+                    <button id="tree" class="p-3 px-5 transform rounded-3xl focus:text-pink-700 focus:bg-white">3</button>
+                    <button id="six" class="p-3 px-5 transform rounded-3xl focus:text-pink-700 focus:bg-white">6</button>
+                    <button id="twelve" class="p-3 px-5 transform rounded-3xl focus:text-pink-700 focus:bg-white">12</button>
+                    <button id="twentyfour" class="p-3 px-5 transform rounded-3xl focus:text-pink-700 focus:bg-white">24</button>
                 </div>
             </div>
         </div>
-        
-
-
     </div>
+    <div class="">
+        <div class="mx-32  flex items-center bg-white  justify-between shadow-lg">
+            <div class="flex flex-col">
+                <span class="ml-2 "> Collatarel needed </span>
+                <span class="ml-2 text-xl text-black font-bold"> 20.102498</span>
+            </div>
+
+            <div class="items-center flex ">
+                <div class="flex items-center">                
+                <img class="p-4" src="icons/icon2.svg" alt="">
+                <span class="text-black mr-2"> Ethereum <span class="text-gray-400"> ETH</span> </span>
+                <div class="flex flex-col mr-4">
+                <a class="text-blue-700" href="#"> ᐱ </a>
+                <a class="text-blue-700" href="#"> ᐯ </a>
+                </div>
+ 
+                <span> Loan to value (LTV) </span>
+            </div>
+
+                <div class="m-2 p-1 transform rounded-full text-black shadow-lg  rounded-3xl">
+                    <button class="p-3 px-5 transform rounded-3xl focus:shadow-lg focus:text-pink-700 focus:bg-white">25%</button>
+                    <button class="p-3 px-5 transform rounded-3xl focus:shadow-lg focus:text-pink-700 focus:bg-white">33%</button>
+                    <button class="p-3 px-5 transform rounded-3xl focus:shadow-lg focus:text-pink-700 focus:bg-white">50%</button>
+                </div>
+            </div>
+        </div>
+    </div>   
+    </div>
+    <div class="text-center items-center flex flex-col m-10 font-bold">
+        <span> <h1 class=" text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-700 to-red-700"> Total interest when paid cash</h1> </span>
+        <span id="total" class="text-8xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-700 to-red-700"> $ 764.44</span>
+    </div>
+    <div class="text-black text-center items-center flex justify-center font-bold">
+        <div class="flex flex-col mr-16">
+            <span> APR % </span>     
+            <span id="apr" class="text-6xl"> 50 % </span>
+        </div>
+        <div class="flex flex-col">
+            <span> Cost per month</span>
+            <span id="cost" class="text-6xl"> 50 % </span>
+        </div>
+    </div>
+    <div class="m-2 p-1 justify-center flex flex-row transform  rounded-full  ">
+    <div class="w-max shadow-lg bg-opacity-10 rounded-3xl">
+        <button class="p-3 px-5 transform rounded-3xl focus:shadow-lg text-pink-700 focus:bg-white">Paid in CEL</button>
+        <button class="p-3 px-5 transform rounded-3xl focus:shadow-lg text-pink-700 focus:bg-white">Pain in Cash</button>
+     </div> 
+    </div>
+   
 
     
     <script src="script.js"></script>
