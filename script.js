@@ -1,21 +1,39 @@
-const arr = [50, 60, 70, 80]
+const object = [
+    {
+        btn: document.querySelector("#tree"),
+        month: 3,
+        apr: 50
+    },
+    {
+        btn: document.querySelector("#six"),
+        month: 6,
+        apr: 60
+    },
+    {
+        btn: document.querySelector("#twelve"),
+        month: 12,
+        apr: 70
+    },
+    {
+        btn: document.querySelector("#twentyfour"),
+        month: 24,
+        apr: 80
+    },
+];
 
-const btn1=document.querySelector("#tree");
-const btn2=document.querySelector("#six");
-const btn3=document.querySelector("#twelve");
-const btn4=document.querySelector("#twentyfour");
-const apr=document.querySelector("#apr");
-const cost=document.querySelector("#cost");
+const apr = document.querySelector("#apr");
+const month = document.querySelector("#cost");
+const money = document.querySelector("#money");
+const total = document.getElementById("total");
 
-btn1.onclick=function(){
-    document.getElementById("total").value = 3*(100*50/12) 
+
+
+for (let i = 0; i < object.length; i++) {
+    object[i].btn.onclick = function () {
+        let monthly = (100 * (object[i].apr / 12));
+        total.innerText = Math.floor(object[i].month * monthly)
+        cost.innerText = Math.floor(100 * (object[i].apr / 12));
+        apr.innerText = (object[i].apr)
+    }
 }
-btn2.onclick=function(){
-    document.getElementById("total").value = 6*(100*60/12) 
-}
-btn3.onclick=function(){
-    document.getElementById("total").value = 12*(100*70/12) 
-}
-btn4.onclick=function(){
-    document.getElementById("total").value = 24*(100*80/12) 
-}
+
