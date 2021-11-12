@@ -1,6 +1,6 @@
-const object = [
+const portfolio = [
     {
-        btn: document.querySelector("#tree"),
+        btn: document.querySelector("#three"),
         month: 3,
         apr: 50
     },
@@ -26,14 +26,27 @@ const month = document.querySelector("#cost");
 const money = document.querySelector("#money");
 const total = document.getElementById("total");
 
+let cash = 10000;
 
-
-for (let i = 0; i < object.length; i++) {
-    object[i].btn.onclick = function () {
-        let monthly = (100 * (object[i].apr / 12));
-        total.innerText = Math.floor(object[i].month * monthly)
-        cost.innerText = Math.floor(100 * (object[i].apr / 12));
-        apr.innerText = (object[i].apr)
+for (let i = 0; i < portfolio.length; i++) {
+    portfolio[i].btn.onclick = function () {
+        let monthly = (100 * (portfolio[i].apr / 12));
+        total.innerText ='$' + (cash +   Math.round(portfolio[i].month * monthly))
+        cost.innerText =  '$' +  Math.round(100 * (portfolio[i].apr / 12));
+        apr.innerText =  (portfolio[i].apr)
+    
     }
 }
 
+
+const header = document.getElementById("myDIV");
+const btns = header.getElementsByClassName("btn");
+
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  const current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  body.background.style = input.value
+  });
+}
